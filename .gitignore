@@ -1,0 +1,29 @@
+# Simulation outputs
+*.vcd
+*.wdb
+*.vpd
+*.dump
+*.log
+*.history
+
+# Tool-specific files
+work/
+simulation/
+*.bak
+*.tmp
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build artifacts
+obj/
+bin/
+*.o
+*.so
+
+# OS files
+.DS_Store
+Thumbs.db
