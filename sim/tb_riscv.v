@@ -6,7 +6,7 @@
 //------------------------------------------------------------------------------
 
 `timescale 1ns / 1ps
-`include "../../rtl/defines.v"
+`include "../rtl/defines.v"
 
 module tb_riscv;
 

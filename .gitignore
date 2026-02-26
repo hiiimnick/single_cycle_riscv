@@ -6,6 +6,11 @@
 *.log
 *.history
 
+# Temporary files
+*.cr.mti
+*.mpf
+modelsim_scripts/*.wlf
+
 # Tool-specific files
 work/
 simulation/

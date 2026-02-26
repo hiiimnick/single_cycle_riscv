@@ -15,6 +15,14 @@ vlog -work work $rtl_path/control.v
 vlog -work work $rtl_path/riscv_simple.v
 
 echo "Compiling testbenches"
-vlog -work work $sim_path/testbenches/tb_riscv.v
+if {[file exists "$sim_path/testbenches/tb_riscv.v"]} {
+    vlog -work work $sim_path/testbenches/tb_riscv.v
+} elseif {[file exists "$sim_path/tb_riscv.v"]} {
+    vlog -work work $sim_path/tb_riscv.v
+} else {
+    foreach f [glob -nocomplain $sim_path/testbenches/*.v] {
+        vlog -work work $f
+    }
+}
 
 echo "Compilation complete."
